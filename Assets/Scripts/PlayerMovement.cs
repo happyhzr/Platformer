@@ -15,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
     private float wallJumpCooldown;
     private float horizontalInput;
 
+    public bool CanAttack()
+    {
+        return horizontalInput == 0 && IsGrounded() && !OnWall();
+    }
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -80,10 +85,6 @@ public class PlayerMovement : MonoBehaviour
             }
             wallJumpCooldown = 0;
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
     }
 
     private bool IsGrounded()
