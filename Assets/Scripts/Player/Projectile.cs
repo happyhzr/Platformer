@@ -42,7 +42,7 @@ public class Projectile : MonoBehaviour
         float movementSpeed = speed * Time.deltaTime * direction;
         transform.Translate(movementSpeed, 0, 0);
         lifetime += Time.deltaTime;
-        if(lifetime > 5) 
+        if (lifetime > 5)
         {
             gameObject.SetActive(false);
         }
@@ -56,7 +56,7 @@ public class Projectile : MonoBehaviour
 
         if (collision.tag == "Enemy")
         {
-            collision.GetComponent<Health>().TakeDamage(1);
+            collision.GetComponent<Health>()?.TakeDamage(1);
         }
     }
 
