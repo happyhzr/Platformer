@@ -21,6 +21,9 @@ public class RangeEnemy : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
 
+    [Header("Fireball")]
+    [SerializeField] private AudioClip fireballSound;
+
     private Animator anim;
     private Health playerHealth;
     private EnemyPatrol enemyPatrol;
@@ -52,6 +55,7 @@ public class RangeEnemy : MonoBehaviour
 
     private void RangedAttack()
     {
+        SoundManager.instance.PlaySound(fireballSound);
         cooldownTimer = 0;
         int i = FindFireball();
         fireballs[i].transform.position = firepoint.position;
