@@ -11,6 +11,10 @@ public class Firetrap : MonoBehaviour
     [SerializeField] private float activeTime;
     private Animator anim;
     private SpriteRenderer spriteRend;
+
+    [Header("SFX")]
+    [SerializeField] private AudioClip firetrapSound;
+
     private bool triggered;
     private bool active;
     private Health playerHealth;
@@ -58,8 +62,9 @@ public class Firetrap : MonoBehaviour
     {
         triggered = true;
         spriteRend.color = Color.red;
-
+        
         yield return new WaitForSeconds(activationDelay);
+        SoundManager.instance.PlaySound(firetrapSound);
         spriteRend.color = Color.white;
         active = true;
         anim.SetBool("activated", true);

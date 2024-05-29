@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     private float wallJumpCooldown;
     private float horizontalInput;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip jumpSound;
+
     public bool CanAttack()
     {
         return horizontalInput == 0 && IsGrounded() && !OnWall();
@@ -57,6 +60,10 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
                 Jump();
+                if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+                {
+                    SoundManager.instance.PlaySound(jumpSound);
+                }
             }
         }
         else
