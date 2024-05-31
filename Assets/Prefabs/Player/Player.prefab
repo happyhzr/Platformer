@@ -225,6 +225,9 @@ MonoBehaviour:
   speed: 10
   jumpPower: 20
   coyoteTime: 0.25
+  extraJumps: 1
+  wallJumpX: 2000
+  wallJumpY: 750
   groundLayer:
     serializedVersion: 2
     m_Bits: 64

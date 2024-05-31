@@ -12,6 +12,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float coyoteTime;
     private float coyoteCounter;
 
+    [Header("Multiple Jumps")]
+    [SerializeField] private int extraJumps;
+    private int jumpCounter;
+
+    [Header("Wall Jumping")]
+    [SerializeField] private float wallJumpX;
+    [SerializeField] private float wallJumpY;
+
     [Header("Layers")]
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
@@ -74,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
             if (IsGrounded())
             {
                 coyoteCounter = coyoteTime;
+                jumpCounter = extraJumps;
             }
             else
             {
@@ -84,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (coyoteCounter < 0 && !OnWall())
+        if (coyoteCounter < 0 && !OnWall() && jumpCounter <= 0)
         {
             return;
         }
@@ -105,6 +114,14 @@ public class PlayerMovement : MonoBehaviour
                 {
                     body.velocity = new Vector2(body.velocity.x, jumpPower);
                 }
+                else
+                {
+                    if (jumpCounter > 0)
+                    {
+                        body.velocity = new Vector2(body.velocity.x, jumpPower);
+                        jumpCounter--;
+                    }
+                }
             }
             coyoteCounter = 0;
         }
@@ -112,7 +129,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void wallJump()
     {
-
+        body.AddForce(new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY));
+        wallJumpCooldown = 0;
     }
 
     private bool IsGrounded()
