@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4852365807780098834}
   - component: {fileID: 2560075752118319460}
   - component: {fileID: 5814512267580491390}
+  - component: {fileID: 208723960998976736}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -255,6 +256,18 @@ MonoBehaviour:
   - {fileID: 4852365807780098834}
   deathSound: {fileID: 8300000, guid: fd8ed7ea04402d04eb61e63b00e93ded, type: 3}
   hurtSound: {fileID: 8300000, guid: 37d570d746b386d4d8aaeee5a4cdaae3, type: 3}
+--- !u!114 &208723960998976736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602589748003087435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0aaeb4405f67f04fa1e8fb1bd3b7ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5903935290007322589
 GameObject:
   m_ObjectHideFlags: 0
