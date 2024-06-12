@@ -2469,6 +2469,7 @@ GameObject:
   - component: {fileID: 451533735}
   - component: {fileID: 451533734}
   - component: {fileID: 451533733}
+  - component: {fileID: 451533738}
   m_Layer: 5
   m_Name: Sound
   m_TagString: Untagged
@@ -2623,6 +2624,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451533731}
   m_CullTransparentMesh: 1
+--- !u!114 &451533738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451533731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8764dcb93885dec449300ab963cfb315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeName: soundVolume
+  textIntro: 'SOUNDS: '
 --- !u!1001 &480252491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4583,6 +4598,7 @@ GameObject:
   - component: {fileID: 774630874}
   - component: {fileID: 774630873}
   - component: {fileID: 774630872}
+  - component: {fileID: 774630877}
   m_Layer: 5
   m_Name: Music
   m_TagString: Untagged
@@ -4737,6 +4753,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774630870}
   m_CullTransparentMesh: 1
+--- !u!114 &774630877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774630870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8764dcb93885dec449300ab963cfb315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeName: musicVolume
+  textIntro: 'MUSIC: '
 --- !u!1 &796339396
 GameObject:
   m_ObjectHideFlags: 0
