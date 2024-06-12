@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Wall Jumping")]
     [SerializeField] private float wallJumpX;
     [SerializeField] private float wallJumpY;
+    [SerializeField] private float wallJumpCooldown;
 
     [Header("Layers")]
     [SerializeField] private LayerMask groundLayer;
@@ -30,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxCollider;
-    private float wallJumpCooldown;
+    private float wallJumpCooldownTimer;
     private float horizontalInput;
 
     public bool CanAttack()
@@ -47,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        wallJumpCooldownTimer += Time.deltaTime;
         horizontalInput = Input.GetAxis("Horizontal");
         if (horizontalInput > 0.01f)
         {
@@ -129,8 +131,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void wallJump()
     {
-        body.AddForce(new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY));
-        wallJumpCooldown = 0;
+        if (wallJumpCooldownTimer > wallJumpCooldown)
+        {
+            body.AddForce(new Vector2(-Mathf.Sign(transform.localScale.x) * wallJumpX, wallJumpY));
+            wallJumpCooldownTimer = 0;
+        }
     }
 
     private bool IsGrounded()

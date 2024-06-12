@@ -230,6 +230,7 @@ MonoBehaviour:
   extraJumps: 1
   wallJumpX: 2000
   wallJumpY: 750
+  wallJumpCooldown: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
