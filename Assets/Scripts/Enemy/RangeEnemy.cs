@@ -84,6 +84,11 @@ public class RangeEnemy : MonoBehaviour
             0,
             playerLayer);
 
+        if (hit.collider != null)
+        {
+            playerHealth = hit.transform.GetComponent<Health>();
+        }
+
         return hit.collider != null;
     }
 

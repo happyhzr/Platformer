@@ -824,6 +824,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Saw
       objectReference: {fileID: 0}
+    - target: {fileID: 3322932232937023055, guid: 51f613b1e3f808348900a1426b06bc4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9058081603933106930, guid: 51f613b1e3f808348900a1426b06bc4a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -3687,6 +3691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyPatrol
       objectReference: {fileID: 0}
+    - target: {fileID: 1665866055092756459, guid: e7a137a5e811e3c47bf9b1acaad1b482, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8867530568334316700, guid: e7a137a5e811e3c47bf9b1acaad1b482, type: 3}
       propertyPath: anim
       value: 
@@ -4111,6 +4119,14 @@ PrefabInstance:
     - target: {fileID: 154154176030026935, guid: 4b2e52cfb2d68944097492d8ef2763b7, type: 3}
       propertyPath: m_Name
       value: Spikehead
+      objectReference: {fileID: 0}
+    - target: {fileID: 154154176030026935, guid: 4b2e52cfb2d68944097492d8ef2763b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203522145219325979, guid: 4b2e52cfb2d68944097492d8ef2763b7, type: 3}
+      propertyPath: speed
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7576857976063462927, guid: 4b2e52cfb2d68944097492d8ef2763b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8825,6 +8841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spikes
       objectReference: {fileID: 0}
+    - target: {fileID: 8944156829874650706, guid: c064c60807f922d45837711274ff4e2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12091,6 +12111,10 @@ PrefabInstance:
     - target: {fileID: 5310407548148460000, guid: 246fa36c8bcc9e54db35f45ecb3e2c62, type: 3}
       propertyPath: m_Name
       value: Arrowtrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310407548148460000, guid: 246fa36c8bcc9e54db35f45ecb3e2c62, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
